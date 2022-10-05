@@ -94,11 +94,26 @@ int ldel_index(list ** head , int index)
     if(index == 0)
     {
         value = (*head)->value;
-        (*head) = (*head)->next;
-        (*head)->prev = NULL;
+		if(current -> next != NULL)
+		{
+			(*head) = (*head)->next;
+			(*head)->prev = NULL;
+		}
+		else
+		{
+			*head = NULL;
+		}
         myfree(current);
         return value;
     }
+
+	if(current -> next == NULL)
+	{
+		value = current->value;
+		myfree(current);
+		*head = NULL;
+		return value;
+	}
 	
 	while(now != index && current -> next != NULL)
 	{
@@ -125,7 +140,8 @@ int ldel_index(list ** head , int index)
 
 void print_list(list ** head)
 {
-    list * current = *head; 
+    list * current = *head;
+	if(*head == NULL) return;
 	while(current -> next != NULL)
 	{
         printf("%d ",current->value);

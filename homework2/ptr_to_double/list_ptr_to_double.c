@@ -146,8 +146,8 @@ void print_list(list ** head)
 	if(*head == NULL) return;
 	while(current -> next != NULL)
 	{
-        printf("%hd ",(*(current->value)));
+        printf("%lf ",(*(current->value)));
 		current = current -> next;
 	}
-    printf("%hd ",(*(current->value)));
+    printf("%lf ",(*(current->value)));
 }

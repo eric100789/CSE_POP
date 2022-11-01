@@ -23,7 +23,7 @@ int main()
                 fflush(stdin);
                 printf("Please input your double\n>> ");
                 input_int = (double*)mymalloc(sizeof(double));
-                scanf("%hd",input_int);
+                scanf("%lf",input_int);
                 if(input_int == NULL)
                 {
                     printf("NULL is invaild.\n\n");
@@ -31,7 +31,7 @@ int main()
                 else
                 {
                     qenqueue(&my_queue,&input_int);
-                    printf("Your input double is: %hd\n\n",(*input_int));
+                    printf("Your input double is: %lf\n\n",(*input_int));
                 }
                 break;
             }
@@ -46,7 +46,7 @@ int main()
                 }
                 else
                 {
-                    printf("%hd has been deleted.\n\n",(*temp));
+                    printf("%lf has been deleted.\n\n",(*temp));
                 }
                 break;
             }

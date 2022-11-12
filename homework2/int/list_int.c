@@ -56,13 +56,12 @@ void ladd_index(list ** head , int value, int index)
 int ldel_value(list ** head , int value)
 {
 	list * current = *head; 
-	int target;
 	
 	while(current->value != value && current -> next != NULL)
 	{
 		current = current -> next;
 	}
-	if(current->value == value) target = value;
+	if(current->value == value) {}
 	else return -1;
 	
 	if( current == (*head) )
@@ -136,6 +135,7 @@ int ldel_index(list ** head , int index)
         myfree(current);
         return value;
     }
+	return 0;
 }
 
 void print_list(list ** head)

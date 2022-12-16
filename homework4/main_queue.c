@@ -8,12 +8,12 @@ int main()
     char input;
     int check_type;
     queue * my_queue = create_queue();
-    printf("Hello, welcome to my homework3!\n");
+    printf("Hello, welcome to my homework4!\n");
     while (1)
     {
         printf("(1)Enqueue (2)Dequeue (3)Print (4)Exit\n>> ");
         
-        input = getchar();
+        scanf("%c",&input);
         getchar();
         if(input == '1')
         {
@@ -23,13 +23,13 @@ int main()
             printf("\t0:char 1:short 2:int 3:long 4:float 5:double\n");
             printf("\t6:ptr_to_char 7:ptr_to_short 8:ptr_to_int 9:ptr_to_long 10:ptr_to_float 11:ptr_to_double\n>> ");
             scanf("%d",&input_type);
-            getchar();
             switch (input_type) {
             case 0:
                 printf("Please input a char\n>> ");
                 
                 char value_char;
-                scanf("%c", &value_char);
+                getchar();
+                value_char = getchar();
                 if(value_char == ' ') { printf("Invalid input\n"); break;}
                 qenqueue_char(&my_queue, value_char, 0);
                 break;
@@ -116,7 +116,8 @@ int main()
                 qenqueue_ptr_double(&my_queue, &value_ptr_double, 11);
                 break;
             }
-            getchar();
+			
+			getchar();
         }
 
         else if(input == '2')

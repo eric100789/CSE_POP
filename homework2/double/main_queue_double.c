@@ -15,13 +15,15 @@ int main()
 
         while(1)
         {
-            fflush(stdin);
+            
             input = getchar();
+            getchar();
             if(input == '1')
             {
-                fflush(stdin);
+                
                 printf("Please input your double\n>> ");
                 scanf("%lf",&input_int);
+                getchar();
                 if(input_int == -1)
                 {
                     printf("-1 is invaild.\n\n");
@@ -36,7 +38,7 @@ int main()
 
             else if(input == '2')
             {
-                fflush(stdin);
+                
                 temp = qdequeue(&my_queue);
                 if(temp == -1)
                 {
@@ -51,7 +53,7 @@ int main()
 
             else if(input == '3')
             {
-                fflush(stdin);
+                
                 print_queue(&my_queue);
                 printf("\n\n");
                 break;
@@ -59,14 +61,14 @@ int main()
 
             else if (input == '4')
             {
-                fflush(stdin);
+                
                 printf("Exiting...\n");
                 return 0;
             }
 
             else
             {
-                fflush(stdin);
+                
                 printf("Wrong number, please input again.\n\n");
                 break;
             }

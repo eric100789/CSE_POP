@@ -1,9 +1,0 @@
-{
-    "C_Cpp.dimInactiveRegions": true,
-    "files.associations": {
-        "stdio.h": "c",
-        "mm.h": "c",
-        "list_ptr.h": "c",
-        "stack_ptr.h": "c"
-    }
-}

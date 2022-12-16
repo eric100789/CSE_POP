@@ -16,14 +16,16 @@ int main()
 
         while(1)
         {
-            fflush(stdin);
+            
             input = getchar();
+            getchar();
             if(input == '1')
             {
-                fflush(stdin);
+                
                 printf("Please input your long\n>> ");
                 input_int = (long*)mymalloc(sizeof(long));
                 scanf("%ld",input_int);
+                getchar();
                 if(input_int == NULL)
                 {
                     printf("NULL is invaild.\n\n");
@@ -38,7 +40,7 @@ int main()
 
             else if(input == '2')
             {
-                fflush(stdin);
+                
                 temp = spop(&my_stack);
                 if(temp == NULL)
                 {
@@ -53,7 +55,7 @@ int main()
 
             else if(input == '3')
             {
-                fflush(stdin);
+                
                 print_stack(&my_stack);
                 printf("\n\n");
                 break;
@@ -61,14 +63,14 @@ int main()
 
             else if (input == '4')
             {
-                fflush(stdin);
+                
                 printf("Exiting...\n");
                 return 0;
             }
 
             else
             {
-                fflush(stdin);
+                
                 printf("Wrong number, please input again.\n\n");
                 break;
             }
